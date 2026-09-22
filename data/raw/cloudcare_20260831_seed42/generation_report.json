@@ -1,0 +1,210 @@
+{
+  "seed": 42,
+  "reference_date": "2026-08-31",
+  "validation": {
+    "clean": "PASS",
+    "raw": "PASS",
+    "saved_excel_roundtrip": "PASS"
+  },
+  "tables": {
+    "user": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.1_user.xlsx",
+      "rows": 5000,
+      "missing_cells": 135,
+      "missing_by_column": {
+        "user_id": 0,
+        "signup_date": 0,
+        "age_group": 40,
+        "region": 75,
+        "signup_channel": 20,
+        "status": 0,
+        "created_at": 0,
+        "updated_at": 0
+      },
+      "inserted_nulls": 135,
+      "logical_duplicates": 0,
+      "missing_logs": 0,
+      "outliers_or_errors": 0,
+      "file_status": "CREATED",
+      "bytes": 200963,
+      "sha256": "69faead2b8abfcb33565a251a19d1a430da19749667eb9c7191f2229fe0a0ba9"
+    },
+    "plan": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.2_plan.xlsx",
+      "rows": 7,
+      "missing_cells": 0,
+      "missing_by_column": {
+        "plan_id": 0,
+        "plan_name": 0,
+        "storage_limit_gb": 0,
+        "monthly_price": 0,
+        "billing_cycle": 0,
+        "is_paid": 0,
+        "is_active": 0
+      },
+      "inserted_nulls": 0,
+      "logical_duplicates": 0,
+      "missing_logs": 0,
+      "outliers_or_errors": 0,
+      "file_status": "CREATED",
+      "bytes": 5432,
+      "sha256": "bd53adc0159c3b35794f36bf453983e4e113f18957e4c00da476bb62295bca6a"
+    },
+    "subscription": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.3_subscription.xlsx",
+      "rows": 6050,
+      "missing_cells": 7274,
+      "missing_by_column": {
+        "subscription_id": 0,
+        "user_id": 0,
+        "plan_id": 0,
+        "start_date": 0,
+        "next_billing_date": 2710,
+        "end_date": 4564,
+        "auto_renewal": 0,
+        "subscription_status": 0,
+        "created_at": 0,
+        "updated_at": 0
+      },
+      "inserted_nulls": 0,
+      "logical_duplicates": 0,
+      "missing_logs": 0,
+      "outliers_or_errors": 0,
+      "file_status": "CREATED",
+      "bytes": 270717,
+      "sha256": "1a2790d53662954272b38047ed939dbab559599b503bc19056ab2877d8bb0a28"
+    },
+    "storage_usage_monthly": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.4_storage_usage_monthly.xlsx",
+      "rows": 79119,
+      "missing_cells": 2373,
+      "missing_by_column": {
+        "usage_id": 0,
+        "user_id": 0,
+        "usage_month": 0,
+        "storage_used_gb": 397,
+        "file_count": 396,
+        "photo_count": 394,
+        "video_count": 394,
+        "upload_size_gb": 396,
+        "download_size_gb": 396,
+        "created_at": 0
+      },
+      "inserted_nulls": 2358,
+      "logical_duplicates": 550,
+      "missing_logs": 1603,
+      "outliers_or_errors": 1179,
+      "file_status": "CREATED",
+      "bytes": 4432047,
+      "sha256": "46c3beac77092dfe18e428cdca2957ead06625a6eddc2d40ae5fd621bc6065fe"
+    },
+    "user_activity_daily": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.5_user_activity_daily.xlsx",
+      "rows": 340173,
+      "missing_cells": 10194,
+      "missing_by_column": {
+        "activity_id": 0,
+        "user_id": 0,
+        "activity_date": 0,
+        "login_count": 1698,
+        "upload_count": 1701,
+        "download_count": 1694,
+        "share_count": 1702,
+        "preview_count": 1698,
+        "active_minutes": 1701
+      },
+      "inserted_nulls": 10152,
+      "logical_duplicates": 1692,
+      "missing_logs": 6908,
+      "outliers_or_errors": 4400,
+      "file_status": "CREATED",
+      "bytes": 13102159,
+      "sha256": "191d3d12160a16b082d03bbd808bc85572683ae9798fc7205c460de848d7afce"
+    },
+    "device": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.6_device.xlsx",
+      "rows": 9129,
+      "missing_cells": 897,
+      "missing_by_column": {
+        "device_id": 0,
+        "user_id": 0,
+        "device_type": 0,
+        "os_type": 73,
+        "sync_enabled": 0,
+        "last_sync_at": 824,
+        "registered_at": 0
+      },
+      "inserted_nulls": 73,
+      "logical_duplicates": 0,
+      "missing_logs": 0,
+      "outliers_or_errors": 0,
+      "file_status": "CREATED",
+      "bytes": 323696,
+      "sha256": "c474e636d845349ce96c53c6f9b3c5aabd1172ba0f7f93a67de47065b0b4bcf4"
+    },
+    "payment_history": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.7_payment_history.xlsx",
+      "rows": 38432,
+      "missing_cells": 192,
+      "missing_by_column": {
+        "payment_id": 0,
+        "subscription_id": 0,
+        "payment_date": 0,
+        "amount": 0,
+        "payment_status": 0,
+        "payment_method": 192,
+        "retry_count": 0
+      },
+      "inserted_nulls": 191,
+      "logical_duplicates": 191,
+      "missing_logs": 0,
+      "outliers_or_errors": 76,
+      "file_status": "CREATED",
+      "bytes": 1232529,
+      "sha256": "1e0050bec84d7ffc0ead1c9e8275756fbeb45e27f6aaa823ed32424547ac342c"
+    },
+    "support_ticket": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.8_support_ticket.xlsx",
+      "rows": 9338,
+      "missing_cells": 347,
+      "missing_by_column": {
+        "ticket_id": 0,
+        "user_id": 0,
+        "category": 47,
+        "priority": 0,
+        "status": 0,
+        "created_at": 0,
+        "resolved_at": 300,
+        "reopened": 0
+      },
+      "inserted_nulls": 47,
+      "logical_duplicates": 37,
+      "missing_logs": 0,
+      "outliers_or_errors": 0,
+      "file_status": "CREATED",
+      "bytes": 429343,
+      "sha256": "d359e343dbbc2614b9fe078f2bb456b126fea581ba6b938e6ea184144b087866"
+    },
+    "subscription_event": {
+      "path": "C:\\dev\\project\\SKN36-2nd-2team\\data\\raw\\cloudcare_20260831_seed42\\5.9_subscription_event.xlsx",
+      "rows": 13023,
+      "missing_cells": 945,
+      "missing_by_column": {
+        "event_id": 0,
+        "user_id": 0,
+        "subscription_id": 0,
+        "event_type": 0,
+        "old_plan_id": 0,
+        "new_plan_id": 945,
+        "event_date": 0
+      },
+      "inserted_nulls": 0,
+      "logical_duplicates": 0,
+      "missing_logs": 0,
+      "outliers_or_errors": 0,
+      "file_status": "CREATED",
+      "bytes": 433358,
+      "sha256": "799c91f2152e0716d624b06f3d082f0cb3ac94004e84530368c01609fab1052c"
+    }
+  }
+}
