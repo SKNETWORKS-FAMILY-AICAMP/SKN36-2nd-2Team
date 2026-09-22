@@ -1,0 +1,17 @@
+[project]
+name = "cloudcare-churn"
+version = "0.1.0"
+description = "CloudCare raw Excel ingestion and churn EDA"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "pandas>=2.2,<3", "numpy>=2,<3", "sqlalchemy>=2,<3",
+  "pymysql[rsa]>=1.1,<2", "python-dotenv>=1,<2", "openpyxl>=3.1,<4",
+  "jupyter>=1,<2", "ipykernel>=6,<7", "scikit-learn>=1.5,<2", "matplotlib>=3.9,<4"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

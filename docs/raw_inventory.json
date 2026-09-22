@@ -1,0 +1,508 @@
+{
+  "user": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.1_user.xlsx",
+    "sheet": "user",
+    "rows": 5000,
+    "sha256": "69faead2b8abfcb33565a251a19d1a430da19749667eb9c7191f2229fe0a0ba9",
+    "pk": "user_id",
+    "columns": {
+      "user_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "signup_date": {
+        "type": "DATE",
+        "nullable": false,
+        "nulls": 0
+      },
+      "age_group": {
+        "type": "VARCHAR(64)",
+        "nullable": true,
+        "nulls": 40
+      },
+      "region": {
+        "type": "VARCHAR(64)",
+        "nullable": true,
+        "nulls": 75
+      },
+      "signup_channel": {
+        "type": "VARCHAR(64)",
+        "nullable": true,
+        "nulls": 20
+      },
+      "status": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "created_at": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "updated_at": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      }
+    },
+    "fk": {}
+  },
+  "plan": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.2_plan.xlsx",
+    "sheet": "plan",
+    "rows": 7,
+    "sha256": "bd53adc0159c3b35794f36bf453983e4e113f18957e4c00da476bb62295bca6a",
+    "pk": "plan_id",
+    "columns": {
+      "plan_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "plan_name": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "storage_limit_gb": {
+        "type": "INT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "monthly_price": {
+        "type": "DECIMAL(18,2)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "billing_cycle": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "is_paid": {
+        "type": "BOOLEAN",
+        "nullable": false,
+        "nulls": 0
+      },
+      "is_active": {
+        "type": "BOOLEAN",
+        "nullable": false,
+        "nulls": 0
+      }
+    },
+    "fk": {}
+  },
+  "subscription": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.3_subscription.xlsx",
+    "sheet": "subscription",
+    "rows": 6050,
+    "sha256": "1a2790d53662954272b38047ed939dbab559599b503bc19056ab2877d8bb0a28",
+    "pk": "subscription_id",
+    "columns": {
+      "subscription_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "user_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "plan_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "start_date": {
+        "type": "DATE",
+        "nullable": false,
+        "nulls": 0
+      },
+      "next_billing_date": {
+        "type": "DATE",
+        "nullable": true,
+        "nulls": 2710
+      },
+      "end_date": {
+        "type": "DATE",
+        "nullable": true,
+        "nulls": 4564
+      },
+      "auto_renewal": {
+        "type": "BOOLEAN",
+        "nullable": false,
+        "nulls": 0
+      },
+      "subscription_status": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "created_at": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "updated_at": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      }
+    },
+    "fk": {
+      "user_id": [
+        "user",
+        "user_id"
+      ],
+      "plan_id": [
+        "plan",
+        "plan_id"
+      ]
+    }
+  },
+  "storage_usage_monthly": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.4_storage_usage_monthly.xlsx",
+    "sheet": "storage_usage_monthly",
+    "rows": 79119,
+    "sha256": "46c3beac77092dfe18e428cdca2957ead06625a6eddc2d40ae5fd621bc6065fe",
+    "pk": "usage_id",
+    "columns": {
+      "usage_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "user_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "usage_month": {
+        "type": "DATE",
+        "nullable": false,
+        "nulls": 0
+      },
+      "storage_used_gb": {
+        "type": "DOUBLE",
+        "nullable": true,
+        "nulls": 397
+      },
+      "file_count": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 396
+      },
+      "photo_count": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 394
+      },
+      "video_count": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 394
+      },
+      "upload_size_gb": {
+        "type": "DOUBLE",
+        "nullable": true,
+        "nulls": 396
+      },
+      "download_size_gb": {
+        "type": "DOUBLE",
+        "nullable": true,
+        "nulls": 396
+      },
+      "created_at": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      }
+    },
+    "fk": {
+      "user_id": [
+        "user",
+        "user_id"
+      ]
+    }
+  },
+  "user_activity_daily": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.5_user_activity_daily.xlsx",
+    "sheet": "user_activity_daily",
+    "rows": 340173,
+    "sha256": "191d3d12160a16b082d03bbd808bc85572683ae9798fc7205c460de848d7afce",
+    "pk": "activity_id",
+    "columns": {
+      "activity_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "user_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "activity_date": {
+        "type": "DATE",
+        "nullable": false,
+        "nulls": 0
+      },
+      "login_count": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 1698
+      },
+      "upload_count": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 1701
+      },
+      "download_count": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 1694
+      },
+      "share_count": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 1702
+      },
+      "preview_count": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 1698
+      },
+      "active_minutes": {
+        "type": "INT",
+        "nullable": true,
+        "nulls": 1701
+      }
+    },
+    "fk": {
+      "user_id": [
+        "user",
+        "user_id"
+      ]
+    }
+  },
+  "device": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.6_device.xlsx",
+    "sheet": "device",
+    "rows": 9129,
+    "sha256": "c474e636d845349ce96c53c6f9b3c5aabd1172ba0f7f93a67de47065b0b4bcf4",
+    "pk": "device_id",
+    "columns": {
+      "device_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "user_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "device_type": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "os_type": {
+        "type": "VARCHAR(64)",
+        "nullable": true,
+        "nulls": 73
+      },
+      "sync_enabled": {
+        "type": "BOOLEAN",
+        "nullable": false,
+        "nulls": 0
+      },
+      "last_sync_at": {
+        "type": "DATETIME(6)",
+        "nullable": true,
+        "nulls": 824
+      },
+      "registered_at": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      }
+    },
+    "fk": {
+      "user_id": [
+        "user",
+        "user_id"
+      ]
+    }
+  },
+  "payment_history": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.7_payment_history.xlsx",
+    "sheet": "payment_history",
+    "rows": 38432,
+    "sha256": "1e0050bec84d7ffc0ead1c9e8275756fbeb45e27f6aaa823ed32424547ac342c",
+    "pk": "payment_id",
+    "columns": {
+      "payment_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "subscription_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "payment_date": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "amount": {
+        "type": "DECIMAL(18,2)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "payment_status": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "payment_method": {
+        "type": "VARCHAR(64)",
+        "nullable": true,
+        "nulls": 192
+      },
+      "retry_count": {
+        "type": "INT",
+        "nullable": false,
+        "nulls": 0
+      }
+    },
+    "fk": {
+      "subscription_id": [
+        "subscription",
+        "subscription_id"
+      ]
+    }
+  },
+  "support_ticket": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.8_support_ticket.xlsx",
+    "sheet": "support_ticket",
+    "rows": 9338,
+    "sha256": "d359e343dbbc2614b9fe078f2bb456b126fea581ba6b938e6ea184144b087866",
+    "pk": "ticket_id",
+    "columns": {
+      "ticket_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "user_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "category": {
+        "type": "VARCHAR(64)",
+        "nullable": true,
+        "nulls": 47
+      },
+      "priority": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "status": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "created_at": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "resolved_at": {
+        "type": "DATETIME(6)",
+        "nullable": true,
+        "nulls": 300
+      },
+      "reopened": {
+        "type": "BOOLEAN",
+        "nullable": false,
+        "nulls": 0
+      }
+    },
+    "fk": {
+      "user_id": [
+        "user",
+        "user_id"
+      ]
+    }
+  },
+  "subscription_event": {
+    "file": "data/raw/cloudcare_20260831_seed42/5.9_subscription_event.xlsx",
+    "sheet": "subscription_event",
+    "rows": 13023,
+    "sha256": "799c91f2152e0716d624b06f3d082f0cb3ac94004e84530368c01609fab1052c",
+    "pk": "event_id",
+    "columns": {
+      "event_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "user_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "subscription_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "event_type": {
+        "type": "VARCHAR(64)",
+        "nullable": false,
+        "nulls": 0
+      },
+      "old_plan_id": {
+        "type": "BIGINT",
+        "nullable": false,
+        "nulls": 0
+      },
+      "new_plan_id": {
+        "type": "BIGINT",
+        "nullable": true,
+        "nulls": 945
+      },
+      "event_date": {
+        "type": "DATETIME(6)",
+        "nullable": false,
+        "nulls": 0
+      }
+    },
+    "fk": {
+      "user_id": [
+        "user",
+        "user_id"
+      ],
+      "subscription_id": [
+        "subscription",
+        "subscription_id"
+      ],
+      "old_plan_id": [
+        "plan",
+        "plan_id"
+      ],
+      "new_plan_id": [
+        "plan",
+        "plan_id"
+      ]
+    }
+  }
+}

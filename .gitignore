@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.verification/
+.uv-cache/
+data/processed/*
+!data/processed/.gitkeep
+mysql-data/
+*.log
