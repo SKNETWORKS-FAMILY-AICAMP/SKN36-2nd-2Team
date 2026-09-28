@@ -1,0 +1,9 @@
+{
+  "threshold": 0.2608657699479043,
+  "risk_bins": {
+    "low_medium": 0.001033560752339794,
+    "medium_high": 0.013068057421317216
+  },
+  "calibration": "none",
+  "selected_model": "HistGradientBoosting (LightGBM fallback)"
+}

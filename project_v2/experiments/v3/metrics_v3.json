@@ -1,0 +1,243 @@
+{
+  "models": {
+    "Logistic Regression": {
+      "valid": {
+        "accuracy": 0.9790729513006063,
+        "balanced_accuracy": 0.7456312475508748,
+        "precision": 0.4790697674418605,
+        "recall": 0.5024390243902439,
+        "f1": 0.49047619047619045,
+        "roc_auc": 0.9632114023964309,
+        "pr_auc": 0.4639258607342614,
+        "brier": 0.04961696782858672,
+        "TN": 9909,
+        "FP": 112,
+        "FN": 102,
+        "TP": 103
+      },
+      "threshold": 0.925669364093435
+    },
+    "CatBoost": {
+      "valid": {
+        "accuracy": 0.9824955994523763,
+        "balanced_accuracy": 0.7163189010395243,
+        "precision": 0.5844155844155844,
+        "recall": 0.43902439024390244,
+        "f1": 0.5013927576601671,
+        "roc_auc": 0.9568734924950287,
+        "pr_auc": 0.491868083435184,
+        "brier": 0.03422817759834154,
+        "TN": 9957,
+        "FP": 64,
+        "FN": 115,
+        "TP": 90
+      },
+      "threshold": 0.9089630545078448
+    },
+    "Tuned CatBoost V2 Params": {
+      "valid": {
+        "accuracy": 0.9823000195579894,
+        "balanced_accuracy": 0.7138299814292425,
+        "precision": 0.577922077922078,
+        "recall": 0.43414634146341463,
+        "f1": 0.4958217270194986,
+        "roc_auc": 0.9567987713606306,
+        "pr_auc": 0.49470092721395065,
+        "brier": 0.03480732825127816,
+        "TN": 9956,
+        "FP": 65,
+        "FN": 116,
+        "TP": 89
+      },
+      "threshold": 0.9056811639035374
+    },
+    "HistGradientBoosting (LightGBM fallback)": {
+      "valid": {
+        "accuracy": 0.9784862116174458,
+        "balanced_accuracy": 0.7381644887200294,
+        "precision": 0.46511627906976744,
+        "recall": 0.4878048780487805,
+        "f1": 0.47619047619047616,
+        "roc_auc": 0.9652276560685974,
+        "pr_auc": 0.49934550179450493,
+        "brier": 0.013682364391472792,
+        "TN": 9906,
+        "FP": 115,
+        "FN": 105,
+        "TP": 100
+      },
+      "threshold": 0.2608657699479043
+    }
+  },
+  "selected_model": "HistGradientBoosting (LightGBM fallback)",
+  "calibration": "none",
+  "threshold": 0.2608657699479043,
+  "valid": {
+    "accuracy": 0.9784862116174458,
+    "balanced_accuracy": 0.7381644887200294,
+    "precision": 0.46511627906976744,
+    "recall": 0.4878048780487805,
+    "f1": 0.47619047619047616,
+    "roc_auc": 0.9652276560685974,
+    "pr_auc": 0.49934550179450493,
+    "brier": 0.013682364391472792,
+    "TN": 9906,
+    "FP": 115,
+    "FN": 105,
+    "TP": 100
+  },
+  "test": {
+    "accuracy": 0.9728733210429287,
+    "balanced_accuracy": 0.7182939012207304,
+    "precision": 0.30927835051546393,
+    "recall": 0.45454545454545453,
+    "f1": 0.36809815950920244,
+    "roc_auc": 0.9563505600090966,
+    "pr_auc": 0.3657548245872826,
+    "brier": 0.014866400992622007,
+    "TN": 3664,
+    "FP": 67,
+    "FN": 36,
+    "TP": 30
+  },
+  "final_holdout": {
+    "accuracy": 0.9741754027103042,
+    "balanced_accuracy": 0.7567759535363185,
+    "precision": 0.3142857142857143,
+    "recall": 0.532258064516129,
+    "f1": 0.39520958083832336,
+    "roc_auc": 0.9721209530753694,
+    "pr_auc": 0.34411742342302704,
+    "brier": 0.013048767483287128,
+    "TN": 3777,
+    "FP": 72,
+    "FN": 29,
+    "TP": 33
+  },
+  "split_summary": {
+    "train": {
+      "rows": 32704,
+      "positive": 1028,
+      "negative": 31676,
+      "positive_ratio": 0.0314334637964775,
+      "min_date": "2024-01-31",
+      "max_date": "2025-10-31"
+    },
+    "valid": {
+      "rows": 10226,
+      "positive": 205,
+      "negative": 10021,
+      "positive_ratio": 0.020046939174652844,
+      "min_date": "2026-01-31",
+      "max_date": "2026-03-31"
+    },
+    "test": {
+      "rows": 3797,
+      "positive": 66,
+      "negative": 3731,
+      "positive_ratio": 0.017382143797735054,
+      "min_date": "2026-05-31",
+      "max_date": "2026-05-31"
+    },
+    "purge": {
+      "rows": 9733,
+      "positive": 165,
+      "negative": 9568,
+      "positive_ratio": 0.016952635364224804,
+      "min_date": "2025-11-30",
+      "max_date": "2026-04-30"
+    },
+    "final_holdout": {
+      "rows": 3911,
+      "positive": 62,
+      "negative": 3849,
+      "positive_ratio": 0.01585272308872411,
+      "min_date": "2026-06-30",
+      "max_date": "2026-06-30"
+    }
+  },
+  "pilot": [
+    {
+      "seed": 42,
+      "churn_ratio": 0.16133333333333333,
+      "valid_roc_auc": 0.9735028437604549,
+      "valid_pr_auc": 0.5948997772289155,
+      "strong_signal_count": 16,
+      "median_abs_effect": 0.1759699586502272
+    },
+    {
+      "seed": 123,
+      "churn_ratio": 0.16266666666666665,
+      "valid_roc_auc": 0.9512951308380257,
+      "valid_pr_auc": 0.4006129321482117,
+      "strong_signal_count": 19,
+      "median_abs_effect": 0.15794810361347994
+    },
+    {
+      "seed": 2026,
+      "churn_ratio": 0.16133333333333333,
+      "valid_roc_auc": 0.9591915707541434,
+      "valid_pr_auc": 0.4429336841570095,
+      "strong_signal_count": 14,
+      "median_abs_effect": 0.20258212380830276
+    }
+  ],
+  "risk_level_config": {
+    "low_medium": 0.001033560752339794,
+    "medium_high": 0.013068057421317216
+  },
+  "features": [
+    "account_age_days",
+    "age_group",
+    "region",
+    "signup_channel",
+    "login_count_30d",
+    "login_count_prev30d",
+    "login_change_rate_30d",
+    "login_slope_90d",
+    "active_days_30d",
+    "active_days_change_rate",
+    "active_minutes_30d",
+    "active_minutes_change_rate",
+    "action_count_30d",
+    "action_count_change_rate",
+    "days_since_last_activity",
+    "storage_used_gb_latest",
+    "storage_change_rate_1m",
+    "storage_change_rate_3m",
+    "storage_slope_90d",
+    "consecutive_storage_decline_months",
+    "storage_utilization_ratio",
+    "payment_count_90d",
+    "failed_payment_count_30d",
+    "failed_payment_count_90d",
+    "payment_failure_rate_90d",
+    "retry_count_90d",
+    "overdue_count_90d",
+    "days_since_last_failed_payment",
+    "ticket_count_30d",
+    "ticket_count_90d",
+    "ticket_change_rate",
+    "urgent_ticket_share",
+    "reopened_count_90d",
+    "avg_resolution_hours_90d",
+    "unresolved_ticket_count",
+    "downgrade_count_90d",
+    "days_since_last_downgrade",
+    "plan_change_count_90d",
+    "days_to_renewal",
+    "auto_renewal_off_flag",
+    "device_count_asof",
+    "device_type_count",
+    "os_type_count",
+    "devices_per_account_year",
+    "device_count_per_tenure",
+    "device_count_per_sqrt_age",
+    "active_sub_count_asof",
+    "paid_sub_count_asof",
+    "total_storage_limit_gb",
+    "total_monthly_price",
+    "min_tenure_days",
+    "max_tenure_days"
+  ]
+}
