@@ -1,0 +1,42 @@
+{
+  "train": {
+    "rows": 32704,
+    "positive": 1028,
+    "negative": 31676,
+    "positive_ratio": 0.0314334637964775,
+    "min_date": "2024-01-31",
+    "max_date": "2025-10-31"
+  },
+  "valid": {
+    "rows": 10226,
+    "positive": 205,
+    "negative": 10021,
+    "positive_ratio": 0.020046939174652844,
+    "min_date": "2026-01-31",
+    "max_date": "2026-03-31"
+  },
+  "test": {
+    "rows": 3797,
+    "positive": 66,
+    "negative": 3731,
+    "positive_ratio": 0.017382143797735054,
+    "min_date": "2026-05-31",
+    "max_date": "2026-05-31"
+  },
+  "purge": {
+    "rows": 9733,
+    "positive": 165,
+    "negative": 9568,
+    "positive_ratio": 0.016952635364224804,
+    "min_date": "2025-11-30",
+    "max_date": "2026-04-30"
+  },
+  "final_holdout": {
+    "rows": 3911,
+    "positive": 62,
+    "negative": 3849,
+    "positive_ratio": 0.01585272308872411,
+    "min_date": "2026-06-30",
+    "max_date": "2026-06-30"
+  }
+}
